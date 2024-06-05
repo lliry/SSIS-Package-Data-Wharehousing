@@ -1,0 +1,2898 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/2/2024 5:33:20 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-CO3JU1B4"
+  DTS:CreatorName="LAPTOP-CO3JU1B4\selfe"
+  DTS:DTSID="{CFDEC5CF-C880-40EF-9F72-95CF7A709283}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{70AEC7CA-5BA7-4E39-A63B-B80C4EDC7C3E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - Loading ODS Employees"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A0CBB60C-B244-4D15-A237-09022BE773AC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - Loading ODS Employees"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - Loading ODS Employees\All - Rejects"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="All - Rejects"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="EmployeeID"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[EmployeeID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[EmployeeID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[FirstName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[FirstName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[LastName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[LastName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[AddressLine]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="AddressLine"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[AddressLine]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[AddressLine]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="City"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[City]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[City]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[CountryCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CountryCode"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[CountryCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[CountryCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[BirthDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="BirthDate"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[BirthDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[BirthDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[Salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Salary"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Salary]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="520"
+                      cachedName="Email"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Output].Columns[Email]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Email]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Error Output].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[Reject_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Reject_Date"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[Reject_PackageAndTask]"
+                      cachedDataType="wstr"
+                      cachedLength="129"
+                      cachedName="Reject_PackageAndTask"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_PackageAndTask]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_PackageAndTask]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[Reject_Column]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Reject_Column"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Column]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Column]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1].Columns[Reject_Description]"
+                      cachedDataType="wstr"
+                      cachedLength="283"
+                      cachedName="Reject_Description"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Description]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Description]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="EmployeeID"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[EmployeeID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[EmployeeID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[FirstName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[FirstName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[LastName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[LastName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[AddressLine]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="AddressLine"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[AddressLine]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[AddressLine]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="City"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[City]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[City]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[CountryCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CountryCode"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[CountryCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[CountryCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[BirthDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="BirthDate"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[BirthDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[BirthDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[Salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Salary"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Salary]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="520"
+                      cachedName="Email"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Output].Columns[Email]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Email]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Error Output].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[Reject_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Reject_Date"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[Reject_PackageAndTask]"
+                      cachedDataType="wstr"
+                      cachedLength="129"
+                      cachedName="Reject_PackageAndTask"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_PackageAndTask]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_PackageAndTask]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[Reject_Column]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Reject_Column"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Column]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Column]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2].Columns[Reject_Description]"
+                      cachedDataType="wstr"
+                      cachedLength="286"
+                      cachedName="Reject_Description"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Description]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Description]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[EmployeeID]"
+                      name="EmployeeID" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[AddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[AddressLine]"
+                      name="AddressLine" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[CountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[CountryCode]"
+                      name="CountryCode" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[BirthDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[BirthDate]"
+                      name="BirthDate" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Salary]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Salary]"
+                      name="Salary" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Email]"
+                      dataType="wstr"
+                      length="520"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Email]"
+                      name="Email" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[ErrorCode]"
+                      name="ErrorCode" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[ErrorColumn]"
+                      name="ErrorColumn" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Date]"
+                      name="Reject_Date" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_PackageAndTask]"
+                      dataType="wstr"
+                      length="129"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_PackageAndTask]"
+                      name="Reject_PackageAndTask" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Column]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Column]"
+                      name="Reject_Column" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Description]"
+                      dataType="wstr"
+                      length="286"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Description]"
+                      name="Reject_Description" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DCNV - Checking BirthDate Type"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Inputs[Data Conversion Input].Columns[BirthDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="BirthDate"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[BirthDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Output].Columns[BirthDate_DATE]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Output].Columns[BirthDate_DATE]"
+                      name="BirthDate_DATE"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[BirthDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DCNV - Checking Salary Type"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Inputs[Data Conversion Input].Columns[Salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Salary"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Output].Columns[Salary_INT]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Output].Columns[Salary_INT]"
+                      name="Salary_INT"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\DCNV - Resizing"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DCNV - Resizing"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="EmployeeID"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[EmployeeID]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input].Columns[AddressLine]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="AddressLine"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[AddressLine]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="City"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="520"
+                      cachedName="Email"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input].Columns[CountryName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CountryName"
+                      lineageId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Match Output].Columns[CountryName]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[EmployeeID_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[EmployeeID_R]"
+                      name="EmployeeID_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[EmployeeID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[FirstName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[FirstName_R]"
+                      name="FirstName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[FirstName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[LastName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[LastName_R]"
+                      name="LastName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[LastName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[AddressLine_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[AddressLine_R]"
+                      name="AddressLine_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[AddressLine]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[City_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[City_R]"
+                      name="City_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[City]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Email_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="110"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Email_R]"
+                      name="Email_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Output].Columns[Email]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[CountryName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[CountryName_R]"
+                      name="CountryName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Match Output].Columns[CountryName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - Cleaning Salary"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Inputs[Derived Column Input].Columns[Salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Salary"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE]([REPLACE](#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]},"$",""),",","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(REPLACE(Salary,"$",""),",","")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\DER - Generating Email"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - Generating Email"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\DER - Generating Email.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Generating Email.Inputs[Derived Column Input].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Generating Email.Inputs[Derived Column Input].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[LastName]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DER - Generating Email.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Output].Columns[Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="520"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Output].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[FirstName]} + "." + #{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[LastName]} + "@dsti.com"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">FirstName + "." + LastName + "@dsti.com"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DER - Generating Email.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - Reject Info (BirthDate)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Inputs[Derived Column Input].Columns[BirthDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="BirthDate"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[BirthDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Date]"
+                      name="Reject_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_PackageAndTask]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="129"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_PackageAndTask]"
+                      name="Reject_PackageAndTask"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)@[System::PackageName] + "(" + @[System::TaskName] + ")"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)@[System::PackageName] + "(" + @[System::TaskName] + ")"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Column]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="9"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Column]"
+                      name="Reject_Column"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"BirthDate"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"BirthDate"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="283"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output].Columns[Reject_Description]"
+                      name="Reject_Description"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"The value" + #{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[BirthDate]} + "is not a valid date"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The value" + BirthDate + "is not a valid date"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - Reject Info (Salary)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Inputs[Derived Column Input].Columns[Salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Salary"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Date]"
+                      name="Reject_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_PackageAndTask]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="129"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_PackageAndTask]"
+                      name="Reject_PackageAndTask"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)@[System::PackageName] + "(" + @[System::TaskName] + ")"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)@[System::PackageName] + "(" + @[System::TaskName] + ")"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Column]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Column]"
+                      name="Reject_Column"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Salary"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Salary"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="286"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output].Columns[Reject_Description]"
+                      name="Reject_Description"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"The value" + #{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]} + "is not a valid integer"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The value" + Salary + "is not a valid integer"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP - Get Country Name"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Geography]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Geography]) [refTable]
+where [refTable].[CountryCode] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CountryCode" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountryName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Continent" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[CountryCode]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Connections[OleDbConnection]"
+                  connectionManagerID="{5CF08E1F-DC08-4644-BE20-A8E70EE635B4}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[STA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Inputs[Lookup Input].Columns[CountryCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CountryCode"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[CountryCode]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CountryCode</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Match Output].Columns[CountryName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Match Output].Columns[CountryName]"
+                      name="CountryName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CountryName</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST - ODS Employees"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Employees]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Connections[OleDbConnection]"
+                  connectionManagerID="{15B05B5B-4F1D-4FF3-B3F6-EBFB950EA3C1}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[EmployeeID_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="EmployeeID_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeID]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[EmployeeID_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[FirstName_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FirstName_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[FirstName_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[LastName_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LastName_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[LastName_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[BirthDate_DATE]"
+                      cachedDataType="date"
+                      cachedName="BirthDate_DATE"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[BirthDate]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Output].Columns[BirthDate_DATE]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[Salary_INT]"
+                      cachedDataType="i4"
+                      cachedName="Salary_INT"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[Salary]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Output].Columns[Salary_INT]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[AddressLine_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="AddressLine_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[AddressLine_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[City_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="City_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[City_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[Email_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="110"
+                      cachedName="Email_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Email_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].Columns[CountryName_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CountryName_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output].Columns[CountryName_R]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="EmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[BirthDate]"
+                      dataType="dbDate"
+                      name="BirthDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[Salary]"
+                      dataType="i4"
+                      name="Salary" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="AddressLine" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="110"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST -Technical reject"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TechnicalRejects]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Connections[OleDbConnection]"
+                  connectionManagerID="{037B4540-5B29-44C9-822D-99B24FEFFC64}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ADM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].Columns[Reject_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Reject_Date"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].ExternalColumns[Reject_Date]"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Date]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].Columns[Reject_PackageAndTask]"
+                      cachedDataType="wstr"
+                      cachedLength="129"
+                      cachedName="Reject_PackageAndTask"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].ExternalColumns[Reject_PackageAndTask]"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_PackageAndTask]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].Columns[Reject_Column]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Reject_Column"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].ExternalColumns[Reject_Column]"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Column]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].Columns[Reject_Description]"
+                      cachedDataType="wstr"
+                      cachedLength="286"
+                      cachedName="Reject_Description"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].ExternalColumns[Reject_Description]"
+                      lineageId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1].Columns[Reject_Description]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].ExternalColumns[Reject_Date]"
+                      dataType="dbTimeStamp"
+                      name="Reject_Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].ExternalColumns[Reject_PackageAndTask]"
+                      dataType="wstr"
+                      length="203"
+                      name="Reject_PackageAndTask" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].ExternalColumns[Reject_Column]"
+                      dataType="wstr"
+                      length="255"
+                      name="Reject_Column" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input].ExternalColumns[Reject_Description]"
+                      dataType="wstr"
+                      length="500"
+                      name="Reject_Description" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE_SRC - STA Employees"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Employees]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Connections[OleDbConnection]"
+                  connectionManagerID="{5CF08E1F-DC08-4644-BE20-A8E70EE635B4}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[STA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[EmployeeID]"
+                      name="EmployeeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[AddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[AddressLine]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[AddressLine]"
+                      name="AddressLine"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[CountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[CountryCode]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[CountryCode]"
+                      name="CountryCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[BirthDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[BirthDate]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[BirthDate]"
+                      name="BirthDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[Salary]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].Columns[Salary]"
+                      name="Salary"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="EmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[AddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="AddressLine" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[CountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CountryCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[BirthDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="BirthDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output].ExternalColumns[Salary]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Salary" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[EmployeeID]"
+                      name="EmployeeID" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[AddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[AddressLine]"
+                      name="AddressLine" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[CountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[CountryCode]"
+                      name="CountryCode" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[BirthDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[BirthDate]"
+                      name="BirthDate" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[Salary]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[Salary]"
+                      name="Salary" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Data Conversion Error Output]"
+              endId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Inputs[Derived Column Input]"
+              name="Data Conversion Error Output"
+              startId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Error Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Data Conversion Error Output1]"
+              endId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Inputs[Derived Column Input]"
+              name="Data Conversion Error Output"
+              startId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Error Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Data Conversion Output]"
+              endId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Inputs[Data Conversion Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Data Conversion Output1]"
+              endId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Data Conversion Output2]"
+              endId="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Derived Column Output]"
+              endId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\DFT - Loading ODS Employees\DER - Generating Email.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Derived Column Output1]"
+              endId="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\DFT - Loading ODS Employees\DER - Cleaning Salary.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Derived Column Output2]"
+              endId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate).Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Derived Column Output3]"
+              endId="Package\DFT - Loading ODS Employees\All - Rejects.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary).Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Lookup Match Output]"
+              endId="Package\DFT - Loading ODS Employees\DCNV - Resizing.Inputs[Data Conversion Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT - Loading ODS Employees\LKP - Get Country Name.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[OLE DB Source Output]"
+              endId="Package\DFT - Loading ODS Employees\DER - Generating Email.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Employees.Paths[Union All Output 1]"
+              endId="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\DFT - Loading ODS Employees\All - Rejects.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - Empty ODS Employees"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{66BCFACD-01AF-4F28-819F-B10C9FBD7BC4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - Empty ODS Employees"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{15B05B5B-4F1D-4FF3-B3F6-EBFB950EA3C1}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Employees" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D024C0E8-52EC-4D95-BFC4-A2D9FFCEB7BF}"
+      DTS:From="Package\EST - Empty ODS Employees"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - Loading ODS Employees" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="224,41.6"
+          Id="Package\DFT - Loading ODS Employees"
+          TopLeft="109.999993989865,279.066664726072" />
+        <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\EST - Empty ODS Employees"
+          TopLeft="120.833326731291,84.0666660820776" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="225.616660360578,125.666666082078">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,153.399998643994"
+              Start="0,0"
+              End="0,145.899998643994">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,145.899998643994" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - Loading ODS Employees">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees"
+          TopLeft="149.16665851656,28.5999998011192" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\DFT - Loading ODS Employees\DER - Generating Email"
+          TopLeft="461.666641442313,25.9999998191992" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[OLE DB Source Output]"
+          TopLeft="359.56665851656,48.0999998101592">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102.099982925753,0"
+              Start="0,0"
+              End="94.5999829257534,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="94.5999829257534,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\DFT - Loading ODS Employees\DER - Cleaning Salary"
+          TopLeft="809.166622455751,36.399999746879" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Derived Column Output]"
+          TopLeft="651.266641442313,46.7999998191992">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="157.899981013438,10.3999999276798"
+              Start="0,0"
+              End="150.399981013438,10.3999999276798">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="74.949990506719,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="74.949990506719,0"
+                    Point2="78.949990506719,0"
+                    Point3="78.949990506719,4" />
+                  <mssgle:LineSegment
+                    End="78.949990506719,6.3999999276798" />
+                  <mssgle:CubicBezierSegment
+                    Point1="78.949990506719,6.3999999276798"
+                    Point2="78.949990506719,10.3999999276798"
+                    Point3="82.949990506719,10.3999999276798" />
+                  <mssgle:LineSegment
+                    End="150.399981013438,10.3999999276798" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="232,41.6"
+          Id="Package\DFT - Loading ODS Employees\DCNV - Checking BirthDate Type"
+          TopLeft="774.999957655869,128.266665774716" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Derived Column Output1]"
+          TopLeft="900.766622455751,77.999999746879">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.76666479988216,50.2666660278372"
+              Start="0,0"
+              End="-9.76666479988216,42.7666660278372">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1333330139186" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1333330139186"
+                    Point2="0,25.1333330139186"
+                    Point3="-4,25.1333330139186" />
+                  <mssgle:LineSegment
+                    End="-5.76666479988216,25.1333330139186" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.76666479988216,25.1333330139186"
+                    Point2="-9.76666479988216,25.1333330139186"
+                    Point3="-9.76666479988216,29.1333330139186" />
+                  <mssgle:LineSegment
+                    End="-9.76666479988216,42.7666660278372" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="218.4,41.6"
+          Id="Package\DFT - Loading ODS Employees\DCNV - Checking Salary Type"
+          TopLeft="465.833307881323,124.799999132156" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Data Conversion Output]"
+          TopLeft="774.999957655869,147.333332453436">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-90.766649774546,0"
+              Start="0,0"
+              End="-83.266649774546,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-83.266649774546,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\DFT - Loading ODS Employees\DER - Reject Info (BirthDate)"
+          TopLeft="744.999959294996,226.199998427033" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Data Conversion Error Output]"
+          TopLeft="890.999957655869,169.866665774716">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-39.9999983608728,56.3333326523172"
+              Start="0,0"
+              End="-39.9999983608728,48.8333326523172">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.1666663261586" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.1666663261586"
+                    Point2="0,28.1666663261586"
+                    Point3="-4,28.1666663261586" />
+                  <mssgle:LineSegment
+                    End="-35.9999983608728,28.1666663261586" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.9999983608728,28.1666663261586"
+                    Point2="-39.9999983608728,28.1666663261586"
+                    Point3="-39.9999983608728,32.1666663261586" />
+                  <mssgle:LineSegment
+                    End="-39.9999983608728,48.8333326523172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-86.0863858991864,33.1666663261586,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\DFT - Loading ODS Employees\DER - Reject Info (Salary)"
+          TopLeft="494.999972954393,230.533331730233" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Data Conversion Error Output1]"
+          TopLeft="575.033307881323,166.399999132156">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.1666650730701,64.133332598077"
+              Start="0,0"
+              End="19.1666650730701,56.633332598077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.0666662990385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.0666662990385"
+                    Point2="0,32.0666662990385"
+                    Point3="4,32.0666662990385" />
+                  <mssgle:LineSegment
+                    End="15.1666650730701,32.0666662990385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.1666650730701,32.0666662990385"
+                    Point2="19.1666650730701,32.0666662990385"
+                    Point3="19.1666650730701,36.0666662990385" />
+                  <mssgle:LineSegment
+                    End="19.1666650730701,56.633332598077" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-56.5030541822149,37.0666662990385,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject"
+          TopLeft="619.466636798118,450.666663532787" />
+        <NodeLayout
+          Size="133.6,41.6"
+          Id="Package\DFT - Loading ODS Employees\All - Rejects"
+          TopLeft="646.733301188218,322.399997758071" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Derived Column Output2]"
+          TopLeft="850.999959294996,267.799998427033">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-116.533324773444,54.5999993310372"
+              Start="0,0"
+              End="-116.533324773444,47.0999993310372">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.3723072956801" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.3723072956801"
+                    Point2="0,32.3723072956801"
+                    Point3="-4,32.3723072956801" />
+                  <mssgle:LineSegment
+                    End="-112.533324773444,32.3723072956801" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-112.533324773444,32.3723072956801"
+                    Point2="-116.533324773444,32.3723072956801"
+                    Point3="-116.533324773444,36.3723072956801" />
+                  <mssgle:LineSegment
+                    End="-116.533324773444,47.0999993310372" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Derived Column Output3]"
+          TopLeft="594.199972954393,272.133331730233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98.3999949004921,50.2666660278373"
+              Start="0,0"
+              End="98.3999949004921,42.7666660278373">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8030765443153" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.8030765443153"
+                    Point2="0,29.8030765443153"
+                    Point3="4,29.8030765443153" />
+                  <mssgle:LineSegment
+                    End="94.3999949004921,29.8030765443153" />
+                  <mssgle:CubicBezierSegment
+                    Point1="94.3999949004921,29.8030765443153"
+                    Point2="98.3999949004921,29.8030765443153"
+                    Point3="98.3999949004921,33.8030765443153" />
+                  <mssgle:LineSegment
+                    End="98.3999949004921,42.7666660278373" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Union All Output 1]"
+          TopLeft="713.533301188218,363.999997758071">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.33333560989968,86.6666657747164"
+              Start="0,0"
+              End="8.33333560989968,79.1666657747164">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3333328873582" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.3333328873582"
+                    Point2="0,43.3333328873582"
+                    Point3="4,43.3333328873582" />
+                  <mssgle:LineSegment
+                    End="4.33333560989968,43.3333328873582" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.33333560989968,43.3333328873582"
+                    Point2="8.33333560989968,43.3333328873582"
+                    Point3="8.33333560989968,47.3333328873582" />
+                  <mssgle:LineSegment
+                    End="8.33333560989968,79.1666657747164" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\DFT - Loading ODS Employees\LKP - Get Country Name"
+          TopLeft="164.699993580083,130.866665756636" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Data Conversion Output1]"
+          TopLeft="465.833307881323,148.633332444396">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-107.53331430124,0"
+              Start="0,0"
+              End="-100.03331430124,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-100.03331430124,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\DFT - Loading ODS Employees\DCNV - Resizing"
+          TopLeft="176.366659609312,298.799998445113" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Lookup Match Output]"
+          TopLeft="258.133326594697,172.466665756636">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,126.333332688477"
+              Start="0,0"
+              End="0,118.833332688477">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,118.833332688477" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,53.6119788442386,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees"
+          TopLeft="149.16665851656,454.133330175347" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Employees.Paths[Data Conversion Output2]"
+          TopLeft="254.766659062936,340.399998445113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,113.733331730233"
+              Start="0,0"
+              End="0,106.233331730233">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,106.233331730233" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Loading ODS Employees\OLE_SRC - STA Employees">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Loading ODS Employees\OLE_DST -Technical reject">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Loading ODS Employees\LKP - Get Country Name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Geography]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Loading ODS Employees\OLE_DST - ODS Employees">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

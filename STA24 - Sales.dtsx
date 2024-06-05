@@ -1,0 +1,1200 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/1/2024 8:20:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-CO3JU1B4"
+  DTS:CreatorName="LAPTOP-CO3JU1B4\selfe"
+  DTS:DTSID="{C264B34C-4F2F-4607-AFD4-E53B15C7EFC9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{E46FB1B8-DC55-47E1-9D4B-1E45BE7E407E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{97D4FD98-804A-481C-B9DE-90833FAAE8A0}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\selfe\Documents\DSTI\DWH_ETL\SSIS_DSTI_A22\Sales.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderNumber"
+              DTS:DTSID="{B45CB7E4-9103-4692-8FAD-D62F9DB7322C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderDate"
+              DTS:DTSID="{D67C7756-3860-42F2-8576-95934D192618}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ShipDate"
+              DTS:DTSID="{A28F72A8-4643-476D-862A-10CD033C7763}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmployeeIdentifier"
+              DTS:DTSID="{F1582744-773B-421D-B27F-83BFF421C71A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmployeeFirstName"
+              DTS:DTSID="{0149E4F5-4FF3-49DE-923D-9D3BD9E3EB5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmployeeLastName"
+              DTS:DTSID="{C988D271-4303-447E-BE0E-4C3CD9B239E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerAccountNumber"
+              DTS:DTSID="{FB4C3B57-543D-433A-9993-C6BF79E20E3C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerFirstName"
+              DTS:DTSID="{DBCF7244-4975-44BE-99E6-7452E9F28A9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerLastName"
+              DTS:DTSID="{0CC77232-BDCE-4A93-A361-375290096430}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerAddr"
+              DTS:DTSID="{2EED6457-2F93-4988-89F1-28CDBAEA49E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerCity"
+              DTS:DTSID="{86B6CB74-4828-48EC-9991-51EF6BF58B29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerCountry"
+              DTS:DTSID="{98C92F8A-D28F-4ADC-A6FA-BD20571C2173}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SubTotal"
+              DTS:DTSID="{76E6785F-F0E5-4602-BC8A-0DA31392595A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalCost"
+              DTS:DTSID="{848AB17D-02D5-4EE8-B823-C26C9C39CE9E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxAmount"
+              DTS:DTSID="{912CD76D-E9DB-4446-8EA6-B409A3275B5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FreightAmount"
+              DTS:DTSID="{61B7FB7B-A3FB-43C2-B47E-EC3297392121}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - Loading STA Sales"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D39575D7-B162-4A14-B838-EE6FECD9F359}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - Loading STA Sales"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv)"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="FF_SRC - Sales (csv)"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[OrderNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[OrderNumber]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[OrderNumber]"
+                      name="OrderNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[OrderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[OrderDate]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[ShipDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[ShipDate]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[ShipDate]"
+                      name="ShipDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeIdentifier]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[EmployeeIdentifier]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeIdentifier]"
+                      name="EmployeeIdentifier"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[EmployeeFirstName]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeFirstName]"
+                      name="EmployeeFirstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[EmployeeLastName]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeLastName]"
+                      name="EmployeeLastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerAccountNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerAccountNumber]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerAccountNumber]"
+                      name="CustomerAccountNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerFirstName]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerFirstName]"
+                      name="CustomerFirstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerLastName]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerLastName]"
+                      name="CustomerLastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerAddr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerAddr]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerAddr]"
+                      name="CustomerAddr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerCity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerCity]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerCity]"
+                      name="CustomerCity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerCountry]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerCountry]"
+                      name="CustomerCountry"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[SubTotal]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[SubTotal]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[SubTotal]"
+                      name="SubTotal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[TotalCost]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[TotalCost]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[TotalCost]"
+                      name="TotalCost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[TaxAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[TaxAmount]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[TaxAmount]"
+                      name="TaxAmount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[FreightAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[FreightAmount]"
+                      length="50"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[FreightAmount]"
+                      name="FreightAmount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[OrderNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[OrderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[ShipDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[EmployeeIdentifier]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EmployeeIdentifier" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[EmployeeFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EmployeeFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[EmployeeLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EmployeeLastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerAccountNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerAccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerLastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerAddr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerAddr" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerCity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerCity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[CustomerCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerCountry" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[SubTotal]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[TotalCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TotalCost" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[TaxAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TaxAmount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].ExternalColumns[FreightAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FreightAmount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST - STA Sales"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Sales]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Connections[OleDbConnection]"
+                  connectionManagerID="{5CF08E1F-DC08-4644-BE20-A8E70EE635B4}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[STA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[OrderNumber]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OrderNumber"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[OrderNumber]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[OrderNumber]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[OrderDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OrderDate"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[ShipDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ShipDate"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[ShipDate]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[ShipDate]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[EmployeeIdentifier]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EmployeeIdentifier"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeIdentifier]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeIdentifier]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[EmployeeFirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EmployeeFirstName"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeFirstName]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeFirstName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[EmployeeLastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EmployeeLastName"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeLastName]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[EmployeeLastName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[CustomerAccountNumber]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerAccountNumber"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerAccountNumber]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerAccountNumber]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[CustomerFirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerFirstName"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerFirstName]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerFirstName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[CustomerLastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerLastName"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerLastName]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerLastName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[CustomerAddr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerAddr"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerAddr]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerAddr]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[CustomerCity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerCity"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerCity]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerCity]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[CustomerCountry]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerCountry"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerCountry]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[CustomerCountry]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[SubTotal]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SubTotal"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[SubTotal]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[SubTotal]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[TotalCost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TotalCost"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[TotalCost]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[TotalCost]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[TaxAmount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TaxAmount"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmount]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[TaxAmount]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].Columns[FreightAmount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FreightAmount"
+                      externalMetadataColumnId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[FreightAmount]"
+                      lineageId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output].Columns[FreightAmount]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[OrderNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="OrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[ShipDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeIdentifier]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="EmployeeIdentifier" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="EmployeeFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="EmployeeLastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerAccountNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerAccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerLastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerAddr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerAddr" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerCity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerCity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[CustomerCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerCountry" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[SubTotal]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[TotalCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="TotalCost" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="TaxAmount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input].ExternalColumns[FreightAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FreightAmount" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - Loading STA Sales.Paths[Flat File Source Output]"
+              endId="Package\DFT - Loading STA Sales\OLE_DST - STA Sales.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv).Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - Empty table Sales"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{08EA9E11-97C6-4D68-A39B-7CD5F536B782}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - Empty table Sales"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5CF08E1F-DC08-4644-BE20-A8E70EE635B4}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Sales" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{FDA40332-1377-4F67-8340-BC8F1B4612BC}"
+      DTS:From="Package\EST - Empty table Sales"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - Loading STA Sales" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\DFT - Loading STA Sales"
+          TopLeft="147.499991940956,205.399998571674" />
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\EST - Empty table Sales"
+          TopLeft="141.666658926342,24.2666664979193" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="237.266658926342,65.8666664979193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.63333301461401,139.533332073755"
+              Start="0,0"
+              End="8.63333301461401,132.033332073755">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.7666660368774" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,65.7666660368774"
+                    Point2="0,69.7666660368774"
+                    Point3="4,69.7666660368774" />
+                  <mssgle:LineSegment
+                    End="4.63333301461401,69.7666660368774" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.63333301461401,69.7666660368774"
+                    Point2="8.63333301461401,69.7666660368774"
+                    Point3="8.63333301461401,73.7666660368774" />
+                  <mssgle:LineSegment
+                    End="8.63333301461401,132.033332073755" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - Loading STA Sales">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\DFT - Loading STA Sales\FF_SRC - Sales (csv)"
+          TopLeft="92.4999949460231,11.2666665883197" />
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\DFT - Loading STA Sales\OLE_DST - STA Sales"
+          TopLeft="130.833326184915,240.066664997273" />
+        <EdgeLayout
+          Id="Package\DFT - Loading STA Sales.Paths[Flat File Source Output]"
+          TopLeft="182.099994946023,52.8666665883197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.7333312388922,187.199998408953"
+              Start="0,0"
+              End="40.7333312388922,179.699998408953">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.5999992044767" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,89.5999992044767"
+                    Point2="0,93.5999992044767"
+                    Point3="4,93.5999992044767" />
+                  <mssgle:LineSegment
+                    End="36.7333312388922,93.5999992044767" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.7333312388922,93.5999992044767"
+                    Point2="40.7333312388922,93.5999992044767"
+                    Point3="40.7333312388922,97.5999992044767" />
+                  <mssgle:LineSegment
+                    End="40.7333312388922,179.699998408953" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Loading STA Sales\OLE_DST - STA Sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

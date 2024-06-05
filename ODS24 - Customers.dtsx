@@ -1,0 +1,1532 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/3/2024 9:39:29 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-CO3JU1B4"
+  DTS:CreatorName="LAPTOP-CO3JU1B4\selfe"
+  DTS:DTSID="{E94C6CB7-0529-4363-8438-8E4F740B2C68}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{37D86777-FB72-4A98-A454-ABAE8C22D0D2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - Loading ODS Customers"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9894CBA6-B03C-4816-9F26-4EBB44CEEBC5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - Loading ODS Customers"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - Loading ODS Customers\Aggregate"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Customers\Aggregate.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Inputs[Aggregate Input 1].Columns[CustomerAccountNumber]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerAccountNumber"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerAccountNumber]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Inputs[Aggregate Input 1].Columns[CustomerFirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerFirstName"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerFirstName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Inputs[Aggregate Input 1].Columns[CustomerLastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerLastName"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerLastName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Inputs[Aggregate Input 1].Columns[CustomerAddr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerAddr"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerAddr]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Inputs[Aggregate Input 1].Columns[CustomerCity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerCity"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerCity]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Inputs[Aggregate Input 1].Columns[CustomerCountry]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerCountry"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerCountry]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerAccountNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerAccountNumber]"
+                      name="CustomerAccountNumber">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerAccountNumber]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerFirstName]"
+                      name="CustomerFirstName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerFirstName]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerLastName]"
+                      name="CustomerLastName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerLastName]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerAddr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerAddr]"
+                      name="CustomerAddr">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerAddr]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerCity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerCity]"
+                      name="CustomerCity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerCity]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerCountry]"
+                      name="CustomerCountry">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerCountry]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Customers\DCNV - Resizing"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DCNV - Resizing"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input].Columns[CustomerAccountNumber]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerAccountNumber"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerAccountNumber]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input].Columns[CustomerFirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerFirstName"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerFirstName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input].Columns[CustomerLastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerLastName"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerLastName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input].Columns[CustomerAddr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerAddr"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerAddr]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input].Columns[CustomerCity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerCity"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerCity]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input].Columns[CountryName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CountryName"
+                      lineageId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output].Columns[CountryName]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input].Columns[Continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Continent"
+                      lineageId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output].Columns[Continent]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[CustomerAccountNumber_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[CustomerAccountNumber_R]"
+                      name="CustomerAccountNumber_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerAccountNumber]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[FirstName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[FirstName_R]"
+                      name="FirstName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerFirstName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[LastName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[LastName_R]"
+                      name="LastName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerLastName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Address_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Address_R]"
+                      name="Address_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerAddr]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[City_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[City_R]"
+                      name="City_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerCity]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Country_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Country_R]"
+                      name="Country_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output].Columns[CountryName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Continent_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Continent_R]"
+                      name="Continent_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output].Columns[Continent]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP - Retrieve Country Name &amp; Continent"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Geography]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Geography]) [refTable]
+where [refTable].[CountryCode] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CountryCode" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountryName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Continent" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerCountry]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Connections[OleDbConnection]"
+                  connectionManagerID="{5CF08E1F-DC08-4644-BE20-A8E70EE635B4}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[STA]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Inputs[Lookup Input].Columns[CustomerCountry]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CustomerCountry"
+                      lineageId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerCountry]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CountryCode</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output].Columns[CountryName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output].Columns[CountryName]"
+                      name="CountryName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CountryName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output].Columns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output].Columns[Continent]"
+                      name="Continent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Continent</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST - ODS Customers"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Connections[OleDbConnection]"
+                  connectionManagerID="{15B05B5B-4F1D-4FF3-B3F6-EBFB950EA3C1}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].Columns[CustomerAccountNumber_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CustomerAccountNumber_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerAccountNumber]"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[CustomerAccountNumber_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].Columns[FirstName_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FirstName_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[FirstName_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].Columns[LastName_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LastName_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[LastName_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].Columns[Address_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Address_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Address_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].Columns[City_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="City_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[City_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].Columns[Country_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Country_R]" />
+                    <inputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].Columns[Continent_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Continent_R"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      lineageId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output].Columns[Continent_R]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerAccountNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CustomerAccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Continent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE_SRC - STA Sales"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Sales]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Connections[OleDbConnection]"
+                  connectionManagerID="{5CF08E1F-DC08-4644-BE20-A8E70EE635B4}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[STA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerAccountNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerAccountNumber]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerAccountNumber]"
+                      name="CustomerAccountNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerFirstName]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerFirstName]"
+                      name="CustomerFirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerLastName]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerLastName]"
+                      name="CustomerLastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerAddr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerAddr]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerAddr]"
+                      name="CustomerAddr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerCity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerCity]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerCity]"
+                      name="CustomerCity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerCountry]"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].Columns[CustomerCountry]"
+                      name="CustomerCountry"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[OrderNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="OrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[ShipDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[EmployeeIdentifier]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="EmployeeIdentifier" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[EmployeeFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="EmployeeFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[EmployeeLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="EmployeeLastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerAccountNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerAccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerLastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerAddr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerAddr" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerCity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerCity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[CustomerCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CustomerCountry" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[SubTotal]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[TotalCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="TotalCost" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[TaxAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="TaxAmount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output].ExternalColumns[FreightAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FreightAmount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerAccountNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerAccountNumber]"
+                      name="CustomerAccountNumber" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerFirstName]"
+                      name="CustomerFirstName" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerLastName]"
+                      name="CustomerLastName" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerAddr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerAddr]"
+                      name="CustomerAddr" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerCity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerCity]"
+                      name="CustomerCity" />
+                    <outputColumn
+                      refId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Error Output].Columns[CustomerCountry]"
+                      name="CustomerCountry" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - Loading ODS Customers.Paths[Aggregate Output 1]"
+              endId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Inputs[Lookup Input]"
+              name="Aggregate Output 1"
+              startId="Package\DFT - Loading ODS Customers\Aggregate.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\DFT - Loading ODS Customers.Paths[Data Conversion Output]"
+              endId="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Customers.Paths[Lookup Match Output]"
+              endId="Package\DFT - Loading ODS Customers\DCNV - Resizing.Inputs[Data Conversion Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT - Loading ODS Customers.Paths[OLE DB Source Output]"
+              endId="Package\DFT - Loading ODS Customers\Aggregate.Inputs[Aggregate Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - Empty ODS Customers"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FE7DE145-37D7-458F-86C9-4F9955AA2C80}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - Empty ODS Customers"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{15B05B5B-4F1D-4FF3-B3F6-EBFB950EA3C1}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Customers" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{79A2DA3B-541C-49D6-8574-916401D67AEC}"
+      DTS:From="Package\EST - Empty ODS Customers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - Loading ODS Customers" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="223.2,41.6"
+          Id="Package\DFT - Loading ODS Customers"
+          TopLeft="134.166659336124,185.466665376955" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\EST - Empty ODS Customers"
+          TopLeft="125.833326458103,25.9999998191992" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="233.433326458103,67.5999998191993">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.3333328780201,117.866665557755"
+              Start="0,0"
+              End="12.3333328780201,110.366665557755">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.9333327788777" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.9333327788777"
+                    Point2="0,58.9333327788777"
+                    Point3="4,58.9333327788777" />
+                  <mssgle:LineSegment
+                    End="8.33333287802012,58.9333327788777" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.33333287802012,58.9333327788777"
+                    Point2="12.3333328780201,58.9333327788777"
+                    Point3="12.3333328780201,62.9333327788777" />
+                  <mssgle:LineSegment
+                    End="12.3333328780201,110.366665557755" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - Loading ODS Customers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales"
+          TopLeft="124.166659882499,45.0666663532787" />
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\DFT - Loading ODS Customers\Aggregate"
+          TopLeft="160.833324545788,159.466665557755" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Customers.Paths[OLE DB Source Output]"
+          TopLeft="220.299992214144,86.6666663532787">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.7999992044767"
+              Start="0,0"
+              End="0,65.2999992044767">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.2999992044767" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="272.8,41.6"
+          Id="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent"
+          TopLeft="117.499993580083,279.066664726072" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Customers.Paths[Aggregate Output 1]"
+          TopLeft="224.033324545788,201.066665557755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29.8666690342956,77.9999991683165"
+              Start="0,0"
+              End="29.8666690342956,70.4999991683165">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.9999995841582" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.9999995841582"
+                    Point2="0,38.9999995841582"
+                    Point3="4,38.9999995841582" />
+                  <mssgle:LineSegment
+                    End="25.8666690342956,38.9999995841582" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.8666690342956,38.9999995841582"
+                    Point2="29.8666690342956,38.9999995841582"
+                    Point3="29.8666690342956,42.9999995841582" />
+                  <mssgle:LineSegment
+                    End="29.8666690342956,70.4999991683165" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\DFT - Loading ODS Customers\DCNV - Resizing"
+          TopLeft="176.666657014026,403.866663858228" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Customers.Paths[Lookup Match Output]"
+          TopLeft="254.483325297055,320.666664726072">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,83.1999991321566"
+              Start="0,0"
+              End="0,75.6999991321566">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.6999991321566" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,32.0453120660783,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers"
+          TopLeft="163.333324409194,538.199996257424" />
+        <EdgeLayout
+          Id="Package\DFT - Loading ODS Customers.Paths[Data Conversion Output]"
+          TopLeft="255.066657014026,445.466663858229">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13.4666673951679,92.7333323991959"
+              Start="0,0"
+              End="13.4666673951679,85.2333323991959">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.366666199598" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.366666199598"
+                    Point2="0,46.366666199598"
+                    Point3="4,46.366666199598" />
+                  <mssgle:LineSegment
+                    End="9.46666739516792,46.366666199598" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9.46666739516792,46.366666199598"
+                    Point2="13.4666673951679,46.366666199598"
+                    Point3="13.4666673951679,50.366666199598" />
+                  <mssgle:LineSegment
+                    End="13.4666673951679,85.2333323991959" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Loading ODS Customers\OLE_SRC - STA Sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Loading ODS Customers\LKP - Retrieve Country Name &amp; Continent">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Geography]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Loading ODS Customers\OLE_DST - ODS Customers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
